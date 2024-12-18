@@ -22,6 +22,8 @@ def fixed_batch_process(im_data, model):
 
     return tuple(torch.cat(v, dim=0) for v in zip(*out))
 
+
+
 def detect_face(imgs, minsize, pnet, rnet, onet, threshold, factor, device):
     if isinstance(imgs, (np.ndarray, torch.Tensor)):
         if isinstance(imgs,np.ndarray):
